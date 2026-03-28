@@ -1,11 +1,37 @@
+
 # DepenseEasy — Intelligent Personal Finance Platform
 
 ## 1. Project Description
 
-**DepenseEasy** est une plateforme SaaS fintech intelligente permettant aux utilisateurs de gérer leurs finances personnelles via un tableau de bord avancé, des outils IA (assistant, OCR, prévisions, détection d'anomalies), et des modules de gestion complète (budgets, objectifs, abonnements, calendrier financier).
+DepenseEasy est une plateforme SaaS fintech intelligente permettant et aider aux utilisateurs de gérer leurs finances personnelles via un tableau de bord avancé, des outils IA (assistant, OCR, prévisions, détection d'anomalies), et des modules de gestion complète (budgets, objectifs, abonnements, calendrier financier).
+
+Ce projet est développé dans le cadre d’un projet académique.
+
+L’application propose :
+
+Une interface utilisateur moderne
+Une gestion complète des finances personnelles
+Des fonctionnalités intelligentes basées sur l’IA.
+
+
+Objectifs
+-Automatiser la gestion financière personnelle
+-Centraliser toutes les données financières
+-Aider à la prise de décision grâce à l’IA
+-Détecter les anomalies et dépenses inutiles
+-Offrir une interface simple, intuitive et moderne
+
+
+ Équipe
+-Robleh Houssein Robleh
+-Ziad Hassan Houssein 
+-Abdirahim MOHAMED ABDI
+-Abdifatah elmi
+
+Encadré par : Dr. Moubarik Barre Hassan
 
 **3 espaces distincts :**
-- Landing page marketing (déjà créée)
+- Landing page marketing 
 - Espace utilisateur (tableau de bord + modules financiers complets)
 - Panneau administrateur (KPIs globaux agrégés, gestion système — sans accès aux données privées)
 
@@ -95,66 +121,11 @@
 
 ---
 
-## 4. Data Model Design (Mock — sans Supabase)
-
-### users
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | UUID |
-| name | string | Nom complet |
-| email | string | Email |
-| avatar | string | URL avatar |
-| plan | string | free/pro/premium |
-| createdAt | Date | Inscription |
-
-### transactions
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | UUID |
-| userId | string | Ref user |
-| type | string | income/expense |
-| amount | number | Montant |
-| category | string | Catégorie |
-| label | string | Description |
-| date | Date | Date |
-| account | string | Compte |
-
-### budgets
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | UUID |
-| userId | string | Ref user |
-| category | string | Catégorie |
-| limit | number | Plafond |
-| spent | number | Dépensé |
-
-### subscriptions
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | UUID |
-| userId | string | Ref user |
-| name | string | Nom service |
-| amount | number | Montant mensuel |
-| nextDate | Date | Prochaine échéance |
-
-### goals
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | UUID |
-| userId | string | Ref user |
-| name | string | Nom objectif |
-| target | number | Montant cible |
-| current | number | Montant actuel |
-
----
-
-## 5. Backend / Third-party Integration Plan
-
-- **Supabase**: Non connecté — données mock locales pour le moment
-- **Shopify**: Non requis
-- **Stripe**: Non requis pour cette phase
-- **OCR**: Simulation frontend (résultat mock après upload)
-- **IA Chat**: Simulation avec réponses contextuelles mock
+ Technologies utilisées
+Frontend : HTML, CSS, JavaScript
+Backend : Node.js
+Base de données : PostgreSQL
+Outils : Supabase (mock), OCR simulation, IA simulation
 
 ---
 
@@ -187,3 +158,44 @@
 ### Phase 7: Modules Admin Complets
 - Goal: Dashboard, users, logs, sécurité, métriques, conformité
 - Deliverable: Admin panel complet (données agrégées uniquement)
+
+Installation
+Cloner le projet :
+git clone https://github.com/ton-username/depenseeasy.git
+Installer les dépendances
+Configurer la base de données PostgreSQL
+Lancer le projet :
+npm start
+Accéder à l’application :
+http://localhost:3000
+
+🧪 Tests
+
+Tests réalisés :
+
+Tests unitaires
+Tests fonctionnels
+Tests d’intégration
+
+Résultat : ✔️ Application fonctionnelle avec données mock
+
+⚠️ Limites
+Données simulées (pas de backend réel connecté)
+OCR simulé (pas de vrai traitement)
+IA basée sur réponses mock
+Pas de paiement ou intégration bancaire réelle
+🔮 Améliorations futures
+Intégration backend réel (API + base de données PostgreSQL)
+Connexion à des services bancaires
+IA avancée (prédictions réelles)
+OCR réel avec reconnaissance automatique
+Notifications (email / mobile)
+Déploiement cloud
+Application mobile
+📄 Licence
+
+Projet académique
+
+🙏 Remerciements
+
+Merci à l’encadrant pour son accompagnement et ses conseils.
